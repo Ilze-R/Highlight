@@ -1,0 +1,63 @@
+hr {
+  border-top: 0.7px solid #aaaaaa;
+  border-bottom: 0;
+}
+ul {
+  padding: 0%;
+}
+
+.active-link {
+  font-weight: bold;
+}
+
+.no-logo {
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4rem;
+  padding-top: 2rem;
+}
+
+.logo {
+  /*background-image: url("./justwords.png");*/
+  font-size: 0.8rem;
+  margin-right: 600px;
+  align-self: center;
+}
+
+a {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.7px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.6em;
+}
+button {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.6em;
+  color: #133337;
+  background-color: #fff;
+  cursor: pointer;
+  border: 0.8px solid #133337;
+  border-radius: 20px;
+  padding: 10px 35px;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.1);
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 3rem;
+  margin-right: 3rem;
+}

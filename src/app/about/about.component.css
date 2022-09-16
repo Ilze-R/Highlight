@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.about-container {
+  font-family: "Lato", sans-serif;
+  padding-top: 70px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 120px;
+}
+
+.all-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.whatitis-wrapper {
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+}
+
+.why-groups-wrapper {
+  display: flex;
+  gap: 70px;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.whatitis-text {
+  width: 600px;
+  height: 450px;
+}
+
+.why-groups-text {
+  width: 600px;
+  height: 450px;
+}
+
+.img-wrapper {
+  width: 450px;
+  height: 250px;
+  padding-top: 40px;
+  background-image: url(stepshigh.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.group-image {
+  width: 450px;
+  height: 250px;
+  padding-top: 40px;
+  background-image: url(grouphig.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+p {
+  letter-spacing: 0.7px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 1.8rem;
+  padding-bottom: 40px;
+}
+
+.why-groups-h1 {
+  text-align: right;
+  padding-right: 350px;
+}
+
+.actions-list {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.7px;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+li {
+  padding-bottom: 5px;
+}
+
+.text-above-list {
+  padding-bottom: 30px;
+}

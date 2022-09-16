@@ -1,0 +1,76 @@
+<div>
+  <app-nav></app-nav>
+  <hr />
+  <!--<h1>{{ createForm.value.username }}</h1>-->
+  <div class="grey-container">
+    <form [formGroup]="createForm">
+      <div class="container">
+        <span [routerLink]="['/']" href="#" class="close">&times;</span>
+        <label for="groupname">Group name</label>
+        <input
+          class="main-input"
+          type="text"
+          name="group-name"
+          formControlName="groupname"
+        />
+        <label for="username">Username</label>
+        <input
+          class="main-input"
+          type="text"
+          name="username"
+          formControlName="username"
+        />
+        <!--<span
+          *ngIf="
+            !createForm.get('username').valid &&
+            createForm.get('username').touched
+          "
+          >Please enter a valid username!</span
+        >-->
+        <label for="email">Email</label>
+        <input
+          class="main-input"
+          type="text"
+          name="email"
+          formControlName="email"
+        />
+        <div class="checkbox-container">
+          <label class="check"
+            >Strict <input class="checkbox" type="checkbox" /><span
+              class="checkmark"
+            ></span>
+          </label>
+          <label class="check"
+            >Non strict <input class="checkbox" type="checkbox" /><span
+              class="checkmark"
+            ></span>
+          </label>
+        </div>
+        <label for="group-size">Choose a group size:</label>
+        <select class="select" id="group-size">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          <option value="3">7</option>
+          <option value="3">8</option>
+          <option value="3">9</option>
+          <option value="3">10</option>
+        </select>
+        <label for="">Password</label>
+        <input class="main-input" type="text" name="password" />
+        <label for="">Confirm password</label>
+        <input class="main-input" type="text" name="password" />
+        <button
+          (click)="onSubmit(createForm.value)"
+          [disabled]="createForm.invalid"
+        >
+          Create group
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<!--[routerLink]="['/user-profile']" href="#"-->

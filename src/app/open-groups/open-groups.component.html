@@ -1,0 +1,43 @@
+<app-nav></app-nav>
+<!-- <p>Description: {{ tempGroups.description }}</p>-->
+<div class="top-sort">
+  <form id="form">
+    <input
+      #myInput
+      type="text"
+      id="search"
+      class="search"
+      placeholder="search"
+      (keyup.enter)="doSearch(myInput.value)"
+    />
+  </form>
+  <button (click)="onStrictClick(); handleStrict()">
+    {{ strictButton ? "strict" : "non strict" }}
+  </button>
+
+  <button class="second-button">size</button>
+</div>
+<div class="flex-cards">
+  <div *ngFor="let tempGroups of groups" class="ngfor">
+    <div class="content">
+      <p class="group-name">{{ tempGroups.groupName }}</p>
+      <p class="group-size">{{ tempGroups.size }}</p>
+      <p
+        class="strict-status"
+        [ngClass]="{
+          classgreen: tempGroups.strict == false,
+          classred: tempGroups.strict == true
+        }"
+      >
+        {{
+          tempGroups.strict == true
+            ? "strict"
+            : tempGroups.strict == false
+            ? "non strict"
+            : "unknown"
+        }}
+      </p>
+      <p class="description">{{ tempGroups.description }}</p>
+    </div>
+  </div>
+</div>

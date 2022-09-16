@@ -1,0 +1,32 @@
+<header class="header">
+  <nav class="main-nav">
+    <ul class="main-nav-list">
+      <div class="no-logo">
+        <li>
+          <!--<img
+            src="./justwords.png"
+            style="max-width: 150px; max-height: 140px"
+        />-->
+          <a class="logo" href="#">Highlight</a>
+        </li>
+
+        <li>
+          <a [routerLink]="['/about']" routerLinkActive="active-link">About</a>
+        </li>
+        <li>
+          <a [routerLink]="['/motivation']" routerLinkActive="active-link"
+            >Motivation</a
+          >
+        </li>
+        <li>
+          <a routerLink="/open-groups/false" routerLinkActive="active-link"
+            >Open groups</a
+          >
+        </li>
+        <li>
+          <button [routerLink]="['/login']">Login</button>
+        </li>
+      </div>
+    </ul>
+  </nav>
+</header>
