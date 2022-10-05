@@ -14,10 +14,6 @@ export class OpenGroupsComponent implements OnInit {
   currentGroupsClosedStatus!: boolean;
   searchMode!: boolean;
   strictButton: boolean = true;
-  currentStrictStatus!: string;
-  currentClosedStatus!: string;
-  theGroupClosedStatus!: boolean;
-  theGroupStrictStatus!: boolean;
 
   constructor(
     private groupsService: GroupsService,
@@ -41,39 +37,17 @@ export class OpenGroupsComponent implements OnInit {
     }
   }
 
+  /**
+   * strict - non-strict button name change
+   */
+
   onStrictClick() {
     this.strictButton = !this.strictButton;
   }
 
-  handleStrict() {
-    const hasGroupStrictStatus: boolean = this.route.snapshot.paramMap.has(
-      'strict'
-    );
-    const hasGroupClosedStatus: boolean = this.route.snapshot.paramMap.has(
-      'closed'
-    );
-
-    if (
-      this.strictButton === true &&
-      hasGroupClosedStatus &&
-      hasGroupStrictStatus
-    ) {
-      this.theGroupStrictStatus = !this.route.snapshot.paramMap.get('strict');
-      this.theGroupClosedStatus = !this.route.snapshot.paramMap.get('closed');
-    } else {
-      this.theGroupClosedStatus = false;
-      this.theGroupStrictStatus = !this.route.snapshot.paramMap.get('strict');
-    }
-
-    /*this.groupsService
-      .getGroupsStrictClosedStatus(
-        this.theGroupClosedStatus,
-        this.theGroupStrictStatus
-      )
-      .subscribe((data) => {
-        this.groups = data;
-      });*/
-  }
+  /**
+   * main search
+   */
 
   doSearch(value: string) {
     console.log(`value=${value}`);
@@ -88,15 +62,17 @@ export class OpenGroupsComponent implements OnInit {
     });
   }
 
+  /**
+   * starter list display
+   */
+
   handleListGroups() {
-    const hasGroupsClosedStatus: boolean = this.route.snapshot.paramMap.has(
-      'closed'
-    );
+    const hasGroupsClosedStatus: boolean =
+      this.route.snapshot.paramMap.has('closed');
 
     if (hasGroupsClosedStatus) {
-      this.currentGroupsClosedStatus = !this.route.snapshot.paramMap.get(
-        'closed'
-      );
+      this.currentGroupsClosedStatus =
+        !this.route.snapshot.paramMap.get('closed');
     } else {
       this.currentGroupsClosedStatus = false;
     }

@@ -9,17 +9,10 @@ import { map } from 'rxjs/operators';
 })
 export class GroupsService {
   private baseUrl = 'http://localhost:8080/api/groups';
-  
-  private csUrl =
-    'http://http://localhost:8080/api/groups/search/findByStrictAndClosed?closed=false&strict=true';
 
   posts!: Observable<Groups>;
 
   constructor(private httpClient: HttpClient) {}
-
-  getCloStr(): Observable<Groups[]> {
-    return this.httpClient.get<Groups[]>(`${this.csUrl}`);
-  }
 
   getGroupsClosedStatus(theGroupsCloseStatus: boolean): Observable<Groups[]> {
     const searchUrl = `${this.baseUrl}/search/findByClosed?closed=${theGroupsCloseStatus}`;
@@ -29,29 +22,10 @@ export class GroupsService {
       .pipe(map((response) => response._embedded.groups));
   }
 
-  getGroupsStrictStatus(theGroupsStrictStatus: boolean): Observable<Groups[]> {
-    const strictUrl = `${this.baseUrl}/search/findByStrict?strict=${theGroupsStrictStatus}`;
-
-    return this.httpClient
-      .get<GetResponse>(strictUrl)
-      .pipe(map((response) => response._embedded.groups));
-  }
-
   searchGroups(theKeyword: string): Observable<Groups[]> {
     const searchUrl = `${this.baseUrl}/search/findByGroupNameContaining?group_name=${theKeyword}`;
 
     return this.getGroups(searchUrl);
-  }
-
-  getGroupsStrictClosedStatus(
-    theGroupClosedStatus: string,
-    theGroupStrictStatus: string
-  ): Observable<Groups[]> {
-    const strictClosedUrl = `${this.baseUrl}/search/findByStrictAndClosed?closed=${theGroupClosedStatus}&strict=${theGroupStrictStatus}`;
-
-    return this.httpClient
-      .get<GetResponse>(strictClosedUrl)
-      .pipe(map((response) => response._embedded.groups));
   }
 
   private getGroups(searchUrl: string): Observable<Groups[]> {
@@ -61,14 +35,14 @@ export class GroupsService {
   }
 }
 
-interface GetResponseGroups {
-  _embedded: {
-    groups: Groups[];
-  };
-}
-
 interface GetResponse {
   _embedded: {
     groups: Groups[];
+  };
+  page: {
+    size: number;
+    totalElements: number;
+    totalPages: number;
+    number: number;
   };
 }

@@ -11,7 +11,7 @@
       (keyup.enter)="doSearch(myInput.value)"
     />
   </form>
-  <button (click)="onStrictClick(); handleStrict()">
+  <button (click)="onStrictClick()">
     {{ strictButton ? "strict" : "non strict" }}
   </button>
 
@@ -38,6 +38,7 @@
         }}
       </p>
       <p class="description">{{ tempGroups.description }}</p>
+      <p>{{ tempGroups.closed }}</p>
     </div>
   </div>
 </div>

@@ -1,152 +1,218 @@
 <app-nav></app-nav>
 
 <div class="container">
-  <div class="with-img-wrap">
-    <div class="main-action">
-      <h1>
-        Create a new group <br />
-        or join existing one
-      </h1>
-      <div class="main-buttons">
-        <button [routerLink]="['/create']" href="#" class="create">
-          Create
-        </button>
-        <button [routerLink]="['/join']" href="#" class="join">Join</button>
+  <div class="content-wrap">
+    <div class="with-img-wrap">
+      <div class="main-action">
+        <h1>
+          Create a new group <br />
+          or join existing one
+        </h1>
+        <div class="main-buttons">
+          <button [routerLink]="['/create']" href="#" class="create">
+            Create
+          </button>
+          <button [routerLink]="['/join']" href="#" class="join">Join</button>
+        </div>
+      </div>
+      <div class="landing-main-image">
+        <img src="2.png" alt="" class="landing-img" />
       </div>
     </div>
-    <div class="landing-main-image">
-      <img src="2.png" alt="" class="landing-img" />
-    </div>
-  </div>
 
-  <div class="how-works-container">
-    <h1 class="how-works-h1">How it works?</h1>
-    <div class="instruction-wrap">
-      <div class="with-line-wrap">
-        <div class="first-wrap">
-          <div>
+    <div class="how-works-container">
+      <h1 class="how-works-h1">How it works?</h1>
+      <div class="instruction-wrap">
+        <div class="with-line-wrap">
+          <div class="first-wrap">
+            <div>
+              <div class="how-first-title">
+                <span>#1</span>
+                <h2><b>Create or join group</b></h2>
+              </div>
+
+              <p>
+                Create and lead yout own group <br />
+                or join existing one with CODE<br />
+                you received from one of the members
+              </p>
+            </div>
+            <div class="first-step-img">
+              <img class="first-img" src="19.png" alt="" />
+            </div>
+          </div>
+          <div class="dots-wrap">
+            <img class="dots-img" src="dotsagainhigh.svg" alt="dotted path" />
+          </div>
+        </div>
+        <div class="second-wrap">
+          <div class="span-h2-text-wrap">
             <div class="how-first-title">
-              <span>#1</span>
-              <h2><b>Create or join group</b></h2>
+              <span>#2</span>
+              <h2><b>Create Your daily Highlight</b></h2>
             </div>
 
             <p>
-              Create and lead yout own group <br />
-              or join existing one with CODE<br />
-              you received from one of the members
+              Set your profile, prioritize <br />
+              one daily task and set it in <br />
+              responsive agenda
             </p>
           </div>
-          <div class="first-step-img">
-            <img class="first-img" src="19.png" alt="" />
+          <div class="second-step-img">
+            <img class="second-img" src="/src/app/new-high/65.svg" alt="" />
+          </div>
+          <div class="dots-wrap-reverse">
+            <img
+              class="dots-img-reverse"
+              src="dotsreverse.svg"
+              alt="dotted path"
+            />
           </div>
         </div>
-        <div class="dots-wrap">
-          <img class="dots-img" src="dotsagainhigh.svg" alt="dotted path" />
-        </div>
-      </div>
-      <div class="second-wrap">
-        <div class="span-h2-text-wrap">
-          <div class="how-first-title">
-            <span>#2</span>
-            <h2><b>Create Your daily Highlight</b></h2>
+
+        <div class="first-wrap">
+          <div>
+            <div class="how-first-title">
+              <span>#3</span>
+              <h2>
+                <b
+                  >Update your Highlight <br />
+                  accordingly</b
+                >
+              </h2>
+            </div>
+            <p>
+              Adjust the progress of your Highlight <br />
+              by stages - started, in process, finished
+            </p>
           </div>
-
-          <p>
-            Set your profile, prioritize <br />
-            one daily task and set it in <br />
-            responsive agenda
-          </p>
-        </div>
-        <div class="second-step-img">
-          <img class="second-img" src="/src/app/new-high/65.svg" alt="" />
-        </div>
-        <div class="dots-wrap-reverse">
-          <img
-            class="dots-img-reverse"
-            src="dotsreverse.svg"
-            alt="dotted path"
-          />
-        </div>
-      </div>
-
-      <div class="first-wrap">
-        <div>
-          <div class="how-first-title">
-            <span>#3</span>
-            <h2>
-              <b
-                >Update your Highlight <br />
-                accordingly</b
-              >
-            </h2>
+          <div class="third-step-img">
+            <img class="third-img" src="16.png" alt="" />
           </div>
-          <p>
-            Adjust the progress of your Highlight <br />
-            by stages - started, in process, finished
-          </p>
-        </div>
-        <div class="third-step-img">
-          <img class="third-img" src="16.png" alt="" />
-        </div>
-        <div class="dots-wrap third-dot">
-          <img class="dots-img" src="dotsagainhigh.svg" alt="dotted path" />
-        </div>
-      </div>
-
-      <div class="second-wrap">
-        <div class="span-h2-text-wrap">
-          <div class="how-first-title">
-            <span>#4</span>
-            <h2><b>Follow the group process</b></h2>
+          <div class="dots-wrap third-dot">
+            <img class="dots-img" src="dotsagainhigh.svg" alt="dotted path" />
           </div>
+        </div>
 
-          <p>
-            See Yours and your group <br />
-            members progress and build <br />
-            the groups success
-          </p>
-        </div>
-        <div class="second-step-img">
-          <img class="second-img" src="65.svg" alt="" />
-        </div>
-        <div class="dots-wrap-reverse">
-          <img
-            class="dots-img-reverse"
-            src="dotsreverse.svg"
-            alt="dotted path"
-          />
-        </div>
-      </div>
+        <div class="second-wrap">
+          <div class="span-h2-text-wrap">
+            <div class="how-first-title">
+              <span>#4</span>
+              <h2><b>Follow the group process</b></h2>
+            </div>
 
-      <div class="first-wrap">
-        <div>
-          <div class="how-first-title">
-            <span>#5</span>
-            <h2>
-              <b
-                >Develop groups and <br />
-                personal status</b
-              >
-            </h2>
+            <p>
+              See Yours and your group <br />
+              members progress and build <br />
+              the groups success
+            </p>
           </div>
-          <p>
-            Grow your teams success and follow <br />
-            other group results. <br />
-            * rules and challenges varies on <br />
-            selected groups strict/non strict <br />
-            status prior on groups creation
-          </p>
+          <div class="second-step-img">
+            <img class="second-img" src="65.svg" alt="" />
+          </div>
+          <div class="dots-wrap-reverse">
+            <img
+              class="dots-img-reverse"
+              src="dotsreverse.svg"
+              alt="dotted path"
+            />
+          </div>
         </div>
-        <div class="third-step-img">
-          <img class="third-img" src="16.png" alt="" />
+
+        <div class="first-wrap">
+          <div>
+            <div class="how-first-title">
+              <span>#5</span>
+              <h2>
+                <b
+                  >Develop groups and <br />
+                  personal status</b
+                >
+              </h2>
+            </div>
+            <p>
+              Grow your teams success and follow <br />
+              other group results. <br />
+              * rules and challenges varies on <br />
+              selected groups strict/non strict <br />
+              status prior on groups creation
+            </p>
+          </div>
+          <div class="third-step-img">
+            <img class="third-img" src="16.png" alt="" />
+          </div>
         </div>
       </div>
     </div>
   </div>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-first">
+        <p class="footer-headings">From Highlight</p>
+        <div class="icon-link">
+          <a href="#">Productivity Hacks</a>
+          <i>icon -> </i>
+        </div>
+        <div class="icon-link">
+          <a href="#">Book ideas from our users</a>
+          <i>icon -> </i>
+        </div>
+        <div class="icon-link">
+          <a href="#">Plan your day article</a>
+          <i>icon -> </i>
+        </div>
+      </div>
+
+      <div class="footer-second">
+        <p class="footer-headings menu">Menu</p>
+        <div class="icon-link">
+          <a href="#">Home</a>
+        </div>
+        <div class="icon-link">
+          <a href="#">About</a>
+        </div>
+        <div class="icon-link">
+          <a href="#">Motivation</a>
+        </div>
+        <div class="icon-link">
+          <a href="#">Open Groups</a>
+        </div>
+      </div>
+
+      <div class="footer-third">
+        <p class="footer-headings menu">Information</p>
+        <div class="icon-link">
+          <a href="#">About</a>
+        </div>
+        <div class="icon-link">
+          <a href="#">Terms & Conditions</a>
+        </div>
+        <div class="icon-link">
+          <a href="#">Users Guide</a>
+        </div>
+        <div class="icon-link">
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+      <div class="footer-fourth">
+        <p class="footer-headings menu">About Us</p>
+        <p class="footer-about-us">
+          New approach to organize daily <br />
+          planning based on Highlight <br />
+          Technique and group <br />
+          approach
+        </p>
+        <div class="footer-icons">
+          <i><</i>
+          <i>&</i>
+          <i>@</i>
+        </div>
+      </div>
+    </div>
+  </footer>
 </div>
-<footer>
-  <div></div>
-</footer>
 
 <!--<div class="create-join-container">
     <div class="create">
