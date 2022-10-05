@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormControl,
+  UntypedFormGroup,
   Validators,
 } from '@angular/forms';
 import { UsersService } from 'src/app/services/users.service';
@@ -14,13 +14,13 @@ import { UsersService } from 'src/app/services/users.service';
   styleUrls: ['./create-high.component.css'],
 })
 export class CreateHighComponent implements OnInit {
-  createForm: any = FormGroup;
+  createForm: any = UntypedFormGroup;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private userService: UsersService,
-    private fb: FormBuilder
+    private fb: UntypedFormBuilder
   ) {}
   /*constructor(
     private router: Router,
@@ -37,9 +37,9 @@ export class CreateHighComponent implements OnInit {
 
   ngOnInit(): void {
     this.createForm = this.fb.group({
-      groupname: new FormControl('', Validators.required),
-      username: new FormControl('', Validators.required),
-      email: new FormControl('', [Validators.required, Validators.email]),
+      groupname: new UntypedFormControl('', Validators.required),
+      username: new UntypedFormControl('', Validators.required),
+      email: new UntypedFormControl('', [Validators.required, Validators.email]),
     });
   }
 
