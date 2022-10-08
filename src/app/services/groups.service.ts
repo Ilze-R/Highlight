@@ -14,6 +14,18 @@ export class GroupsService {
 
   constructor(private httpClient: HttpClient) {}
 
+  getGroupsPaginate(
+    thePage: number,
+    thePageSize: number,
+    theGroupsCloseStatus: boolean
+  ): Observable<GetResponse> {
+    const searchUrl =
+      `${this.baseUrl}/search/findByClosed?closed=${theGroupsCloseStatus}` +
+      `&page=${thePage}&size=${thePageSize}`;
+
+    return this.httpClient.get<GetResponse>(searchUrl);
+  }
+
   getGroupsClosedStatus(theGroupsCloseStatus: boolean): Observable<Groups[]> {
     const searchUrl = `${this.baseUrl}/search/findByClosed?closed=${theGroupsCloseStatus}`;
 

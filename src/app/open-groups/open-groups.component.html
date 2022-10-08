@@ -42,3 +42,14 @@
     </div>
   </div>
 </div>
+
+<div class="pagination-wrap">
+  <ngb-pagination
+    class="d-flex justify-content-center"
+    [(page)]="thePageNumber"
+    [pageSize]="thePageSize"
+    [collectionSize]="theTotalElements"
+    (pageChange)="listGroups()"
+  >
+  </ngb-pagination>
+</div>

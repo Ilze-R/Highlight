@@ -15,6 +15,11 @@ export class OpenGroupsComponent implements OnInit {
   searchMode!: boolean;
   strictButton: boolean = true;
 
+  // properties for pagination
+  thePageNumber: number = 0;
+  thePageSize: number = 10;
+  theTotalElements: number = 20;
+
   constructor(
     private groupsService: GroupsService,
     private route: ActivatedRoute,
@@ -77,10 +82,19 @@ export class OpenGroupsComponent implements OnInit {
       this.currentGroupsClosedStatus = false;
     }
 
+    //Check if we have a different
+
     this.groupsService
-      .getGroupsClosedStatus(this.currentGroupsClosedStatus)
+      .getGroupsPaginate(
+        this.thePageNumber - 1,
+        this.thePageSize,
+        this.currentGroupsClosedStatus
+      )
       .subscribe((data) => {
-        this.groups = data;
+        this.groups = data._embedded.groups;
+        this.thePageNumber = data.page.number + 1;
+        this.thePageSize = data.page.size;
+        this.theTotalElements = data.page.totalElements;
       });
   }
 }

@@ -20,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from './services/users.service';
 import { GroupsService } from './services/groups.service';
 
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +42,7 @@ import { GroupsService } from './services/groups.service';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule,
   ],
   providers: [UsersService, GroupsService],
   bootstrap: [AppComponent],
