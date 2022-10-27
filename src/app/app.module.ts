@@ -14,7 +14,6 @@ import { AboutComponent } from './about/about.component';
 import { OpenGroupsComponent } from './open-groups/open-groups.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { LoggedInNavComponent } from './nav/logged-in-nav/logged-in-nav.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from './_services/users.service';
@@ -40,7 +39,6 @@ import { RouterModule } from '@angular/router';
     OpenGroupsComponent,
     MotivationComponent,
     UserProfileComponent,
-    LoggedInNavComponent,
     FooterComponent,
     HowItWorksComponent,
     AdminPanelComponent,

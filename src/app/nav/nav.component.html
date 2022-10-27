@@ -24,7 +24,18 @@
           >
         </li>
         <li>
-          <button [routerLink]="['/login']">Login</button>
+          <button
+            *ngIf="!isLoggedIn()"
+            class="btn-login"
+            [routerLink]="['/login']"
+          >
+            Login
+          </button>
+        </li>
+        <li>
+          <button *ngIf="isLoggedIn()" class="btn-logout" (click)="logOut()">
+            Log out
+          </button>
         </li>
       </div>
     </ul>

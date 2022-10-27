@@ -41,16 +41,26 @@ button {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 0.6em;
-  color: #133337;
-  background-color: #fff;
   cursor: pointer;
-  border: 0.8px solid #133337;
   border-radius: 20px;
   padding: 10px 35px;
   transition: all 0.3s ease-in-out;
 }
+
 button:hover {
   transform: scale(1.1);
+}
+
+.btn-login {
+  color: #133337;
+  background-color: #fff;
+  border: 0.8px solid #133337;
+}
+
+.btn-logout {
+  color: #e44232;
+  background-color: #fff;
+  border: 0.8px solid #e44232;
 }
 
 .li-rote:hover {
