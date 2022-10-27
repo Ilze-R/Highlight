@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /*background-size: 40%;
+  background-position-x: 38rem;
+  background-position-y: 10rem;*/
+  position: relative;
+  width: 100%;
+  min-height: 2600px;
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 25rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* margin: 0 auto -10px; */
+
+  /*background-size: cover;*/
+}
+
+.content-wrap {
+  padding-bottom: 10rem;
+}
+
+.instruction-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+}
+
+h1 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 300;
+  color: black;
+  margin-bottom: 2rem;
+  font-size: 30px;
+}
+
+h2 {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  margin-bottom: 1.563rem;
+  font-size: 23px;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.7px;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 20px;
+  padding-left: 3.75rem;
+  color: gray;
+}
+
+.how-first-title {
+  display: flex;
+  gap: 35px;
+}
+
+.first-wrap,
+.second-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.first-wrap {
+  gap: 50px;
+}
+
+.second-wrap {
+  flex-direction: row-reverse;
+  gap: 20px;
+}
+
+.third-step-img {
+  background-image: url(16.png);
+}
+
+.second-step-img {
+  background-image: url(/src/app/how-it-works/16.png);
+  padding-left: 125px;
+}
+
+.first-step-img {
+  background-image: url(19.png);
+}
+
+.first-img,
+.second-img,
+.third-img {
+  width: 200px;
+  height: 150px;
+}
+
+span {
+  text-align: center;
+  align-self: center;
+  margin-bottom: 15px;
+  font-size: 23px;
+  padding-bottom: 8px;
+  color: blueviolet;
+}
+
+.span-h2-text-wrap {
+  padding-left: 50px;
+}
+
+.dots-img,
+.dots-img-reverse {
+  width: 400px;
+  height: 170px;
+}
+
+.dots-img {
+  background-image: url(dotsreverse.svg) no-repeat;
+}
+
+.dots-img-reverse {
+  background-image: url(dotsagainhigh.svg) no-repeat;
+}
+
+.with-line-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.dots-wrap {
+  position: absolute;
+  padding-top: 70px;
+  padding-left: 50px;
+}
+
+.dots-wrap-reverse {
+  position: absolute;
+  padding-top: 160px;
+  padding-right: 180px;
+}
+
+.third-dot {
+  padding-right: 220px;
+  padding-top: 170px;
+}

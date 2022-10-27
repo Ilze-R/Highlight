@@ -9,6 +9,9 @@ import { AboutComponent } from './about/about.component';
 import { OpenGroupsComponent } from './open-groups/open-groups.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
+import { LoggedUserComponent } from './logged-user/logged-user.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 const routes: Routes = [
   { path: 'home', component: NewHighComponent },
@@ -16,6 +19,9 @@ const routes: Routes = [
   { path: 'join', component: JoinComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'logged-user', component: LoggedUserComponent },
+  { path: 'admin', component: AdminPanelComponent },
+  { path: 'forbidden', component: ForbiddenComponent },
   { path: 'open-groups/:closed', component: OpenGroupsComponent },
   { path: 'groups/searh/:closed/:strict', component: OpenGroupsComponent },
   { path: 'search/:keyword', component: OpenGroupsComponent },

@@ -5,8 +5,22 @@
     <form action="">
       <div class="container">
         <div class="team-image"></div>
+        <p>
+          Please enter the code you received from group member. If you don't
+          have a code, you are welcome to
+          <a [routerLink]="['/create']" href="#" class="create">create</a> Your
+          own group or check our
+          <a routerLink="/open-groups/false" routerLinkActive="active-link"
+            >open groups</a
+          >
+          who are welcoming new members
+        </p>
         <div class="btn-container">
-          <input type="text" placeholder="Enter the code" name="enter-the-code"/>
+          <input
+            type="text"
+            placeholder="Enter the code"
+            name="enter-the-code"
+          />
           <button class="btn">Join</button>
         </div>
       </div>

@@ -3,32 +3,49 @@
   <hr />
   <div class="grey-container">
     <div class="main-container">
-      <span [routerLink]="['/']" href="#" class="close">&times;</span>
-      <label for="uname">Username or email</label>
-      <input class="main-input" type="text" name="uname" required />
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+        <span [routerLink]="['/']" href="#" class="close">&times;</span>
+        <label for="uname">Username or email</label>
+        <input
+          ngModel
+          class="main-input"
+          type="text"
+          name="userName"
+          id="userName"
+          required
+        />
 
-      <label for="">Password</label>
-      <input class="main-input" type="text" name="password" required />
+        <label for="">Password</label>
+        <input
+          ngModel
+          class="main-input"
+          type="password"
+          id="userPassword"
+          name="userPassword"
+          required
+        />
 
-      <button
-        [routerLink]="['/user-profile']"
-        href="#"
-        class="main-button"
-        type="submit"
-      >
-        Log in
-      </button>
+        <input type="submit" value="Login" />
+        <!-- <button
+          [routerLink]="['/user-profile']"
+          href="#"
+          class="main-button"
+          type="submit"
+        >
+          Log in
+        </button> -->
 
-      <div class="under-login">
-        <a href="#">Forgot login or password?</a>
-        <!--<div class="checkbox-container">
+        <div class="under-login">
+          <a href="#">Forgot login or password?</a>
+          <!--<div class="checkbox-container">
         <label class="check"
           >Keep me logged in <input class="checkbox" type="checkbox" /><span
             class="checkmark"
           ></span>
         </label>
       </div>-->
-      </div>
+        </div>
+      </form>
     </div>
   </div>
 </div>

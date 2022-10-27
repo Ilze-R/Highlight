@@ -6,7 +6,7 @@ import {
   UntypedFormGroup,
   Validators,
 } from '@angular/forms';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersService } from 'src/app/_services/users.service';
 
 @Component({
   selector: 'app-create-high',
@@ -39,7 +39,10 @@ export class CreateHighComponent implements OnInit {
     this.createForm = this.fb.group({
       groupname: new UntypedFormControl('', Validators.required),
       username: new UntypedFormControl('', Validators.required),
-      email: new UntypedFormControl('', [Validators.required, Validators.email]),
+      email: new UntypedFormControl('', [
+        Validators.required,
+        Validators.email,
+      ]),
     });
   }
 

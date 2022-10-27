@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Groups } from '../common/groups';
-import { GroupsService } from '../services/groups.service';
+import { Groups } from '../_common/groups';
+import { GroupsService } from '../_services/groups.service';
 
 @Component({
   selector: 'app-open-groups',

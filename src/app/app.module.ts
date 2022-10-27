@@ -17,10 +17,16 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { LoggedInNavComponent } from './nav/logged-in-nav/logged-in-nav.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { UsersService } from './services/users.service';
-import { GroupsService } from './services/groups.service';
+import { UsersService } from './_services/users.service';
+import { GroupsService } from './_services/groups.service';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FooterComponent } from './footer/footer.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { LoggedUserComponent } from './logged-user/logged-user.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -35,6 +41,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MotivationComponent,
     UserProfileComponent,
     LoggedInNavComponent,
+    FooterComponent,
+    HowItWorksComponent,
+    AdminPanelComponent,
+    LoggedUserComponent,
+    ForbiddenComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +54,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
+    RouterModule,
   ],
   providers: [UsersService, GroupsService],
   bootstrap: [AppComponent],

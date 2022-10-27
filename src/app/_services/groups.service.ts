@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Groups } from '../common/groups';
+import { Groups } from '../_common/groups';
 import { map } from 'rxjs/operators';
 
 @Injectable({

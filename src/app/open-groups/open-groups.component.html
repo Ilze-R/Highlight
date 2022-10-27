@@ -49,6 +49,8 @@
     [(page)]="thePageNumber"
     [pageSize]="thePageSize"
     [collectionSize]="theTotalElements"
+    [maxSize]="5"
+    [boundaryLinks]="true"
     (pageChange)="listGroups()"
   >
   </ngb-pagination>
