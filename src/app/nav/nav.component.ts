@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserAuthService } from '../_services/user-auth.service';
+import { AuthenticationService } from 'src/app/_services/authentication.service';
+import { User } from 'src/app/_models/user.model';
+import { Role } from 'src/app/_models/role.enum';
 
 @Component({
   selector: 'app-nav',
@@ -8,19 +10,34 @@ import { UserAuthService } from '../_services/user-auth.service';
   styleUrls: ['./nav.component.css'],
 })
 export class NavComponent implements OnInit {
-  constructor(
-    private userAuthService: UserAuthService,
-    private router: Router
-  ) {}
-
   ngOnInit(): void {}
 
-  public isLoggedIn() {
-    return this.userAuthService.isLoggedIn();
+  currentUser: User = new User();
+
+  constructor(
+    private authenticationService: AuthenticationService,
+    private router: Router
+  ) {
+    this.authenticationService.currentUser.subscribe((data) => {
+      this.currentUser = data;
+    });
   }
 
-  public logOut() {
-    this.userAuthService.clear();
+  isAdmin() {
+    return this.currentUser?.role === Role.ADMIN;
+  }
+
+  logOut() {
+    this.authenticationService.logOut();
     this.router.navigate(['/home']);
   }
+
+  // public isLoggedIn() {
+  //   return this.userAuthService.isLoggedIn();
+  // }
+
+  // public logOut() {
+  //   this.userAuthService.clear();
+  //   this.router.navigate(['/home']);
+  // }
 }

@@ -1,0 +1,162 @@
+<div>
+  <app-nav></app-nav>
+  <hr />
+  <!-- comment out <h1>{{ createForm.value.username }}</h1>-->
+  <!-- <div class="grey-container">
+    <form #f="ngForm" (ngSubmit)="f.form.valid && register()">
+      <div class="container">
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+        <span [routerLink]="['/']" href="#" class="close">&times;</span>
+        <label for="name">Full Name</label>
+        <input
+          class="form-group main-input"
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="user.name"
+          #name="ngModel"
+          required
+        />
+        <div class="alert-danger" *ngIf="!name.valid && f.submitted">
+          Full name is required
+        </div>
+        <label for="username">Username</label>
+        <input
+          class="form-group main-input"
+          type="text"
+          id="username"
+          name="username"
+          [(ngModel)]="user.username"
+          #username="ngModel"
+          required
+        />
+        <div class="alert-danger" *ngIf="!username.valid && f.submitted">
+          Username is required
+        </div> -->
+  <!-- comment out <span
+          *ngIf="
+            !createForm.get('username').valid &&
+            createForm.get('username').touched
+          "
+          >Please enter a valid username!</span
+        >-->
+  <!-- <label for="email">Something</label>
+        <input
+          class="main-input"
+          type="text"
+          name="firstName"
+          formControlName="firstName"
+        />
+        <div class="checkbox-container">
+          <label class="check"
+            >Strict <input class="checkbox" type="checkbox" /><span
+              class="checkmark"
+            ></span>
+          </label>
+          <label class="check"
+            >Non strict <input class="checkbox" type="checkbox" /><span
+              class="checkmark"
+            ></span>
+          </label>
+        </div>
+        <label for="group-size">Choose a group size:</label>
+        <select class="select" id="group-size">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          <option value="3">7</option>
+          <option value="3">8</option>
+          <option value="3">9</option>
+          <option value="3">10</option>
+        </select>
+        <label for="password">Password</label>
+        <input
+          class="form-group main-input"
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="user.password"
+          #password="ngModel"
+          required
+        />
+        <div class="alert-danger" *ngIf="!password.valid && f.submitted">
+          Password is required
+        </div>
+        <label for="">Confirm password</label>
+        <input class="main-input" type="text" name="password" />
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div> -->
+  <div class="container mt-5">
+    <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
+      <fa-icon [icon]="faUser" class="ms-auto me-auto user-icon"></fa-icon>
+
+      <form #f="ngForm" (ngSubmit)="f.form.valid && register()">
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            [(ngModel)]="user.name"
+            #name="ngModel"
+            class="form-control"
+            required
+          />
+          <div class="alert-danger" *ngIf="!name.valid && f.submitted">
+            Full name is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            [(ngModel)]="user.username"
+            #username="ngModel"
+            class="form-control"
+            required
+          />
+          <div class="alert-danger" *ngIf="!username.valid && f.submitted">
+            Username is required.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            [(ngModel)]="user.password"
+            #password="ngModel"
+            class="form-control"
+            required
+          />
+          <div class="alert-danger" *ngIf="!password.valid && f.submitted">
+            Password is required.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-danger w-100 mt-3">Sign Up</button>
+      </form>
+
+      <a [routerLink]="['/login']" class="btn btn-link" style="color: darkgray">
+        I have an account!
+      </a>
+    </div>
+  </div>
+</div>
+<!-- [routerLink]="['/user-profile']" href="#" -->

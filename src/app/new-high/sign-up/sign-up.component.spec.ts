@@ -1,20 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CreateHighComponent } from './create-high.component';
+import { SignUpComponent } from './sign-up.component';
 
 describe('CreateHighComponent', () => {
-  let component: CreateHighComponent;
-  let fixture: ComponentFixture<CreateHighComponent>;
+  let component: SignUpComponent;
+  let fixture: ComponentFixture<SignUpComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CreateHighComponent ]
-    })
-    .compileComponents();
+      declarations: [SignUpComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CreateHighComponent);
+    fixture = TestBed.createComponent(SignUpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

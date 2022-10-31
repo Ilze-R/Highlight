@@ -25,6 +25,21 @@
         </li>
         <li>
           <button
+            class="btn-login"
+            [routerLink]="['/login']"
+            *ngIf="!currentUser?.id"
+          >
+            Login
+          </button>
+        </li>
+        <li class="li-rote">
+          <a [routerLink]="['/profile']">{{ currentUser.username }}</a>
+        </li>
+        <li>
+          <button class="btn-logout" (click)="logOut()">Log out</button>
+        </li>
+        <!-- <li>
+          <button
             *ngIf="!isLoggedIn()"
             class="btn-login"
             [routerLink]="['/login']"
@@ -36,7 +51,7 @@
           <button *ngIf="isLoggedIn()" class="btn-logout" (click)="logOut()">
             Log out
           </button>
-        </li>
+        </li> -->
       </div>
     </ul>
   </nav>

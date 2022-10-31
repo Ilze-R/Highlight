@@ -8,17 +8,17 @@ import { UsersService } from '../_services/users.service';
   styleUrls: ['./user-profile.component.css'],
 })
 export class UserProfileComponent implements OnInit {
-  users!: Users[];
+  // users!: Users[];
 
-  constructor(private UsersService: UsersService) {}
+  // constructor(private UsersService: UsersService) {}
 
   ngOnInit() {
-    this.listUsers();
+    //   this.listUsers();
   }
 
-  listUsers() {
-    this.UsersService.getUsersList().subscribe((data) => {
-      this.users = data;
-    });
-  }
+  //   listUsers() {
+  //     this.UsersService.getUsersList().subscribe((data) => {
+  //       this.users = data;
+  //     });
+  //   }
 }

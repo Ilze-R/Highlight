@@ -3,29 +3,39 @@
   <hr />
   <div class="grey-container">
     <div class="main-container">
-      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <form #f="ngForm" (ngSubmit)="f.form.valid && login()">
         <span [routerLink]="['/']" href="#" class="close">&times;</span>
-        <label for="uname">Username or email</label>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+        <label for="username">Username or email</label>
         <input
-          ngModel
           class="main-input"
           type="text"
-          name="userName"
-          id="userName"
+          name="username"
+          id="username"
+          [(ngModel)]="user.username"
+          #username="ngModel"
           required
         />
+        <div class="alert-danger" *ngIf="!username.valid && f.submitted">
+          Username is required
+        </div>
 
-        <label for="">Password</label>
+        <label for="password">Password</label>
         <input
-          ngModel
-          class="main-input"
-          type="password"
-          id="userPassword"
-          name="userPassword"
+          type="text"
+          name="password"
+          id="password"
+          [(ngModel)]="user.password"
+          #password="ngModel"
           required
         />
+        <div class="alert-danger" *ngIf="!password.valid && f.submitted">
+          Password is required
+        </div>
 
-        <input type="submit" value="Login" />
+        <button class="btn-login" type="submit" value="Login">Login</button>
         <!-- <button
           [routerLink]="['/user-profile']"
           href="#"
