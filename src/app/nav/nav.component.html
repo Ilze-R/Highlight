@@ -23,20 +23,16 @@
             >Open groups</a
           >
         </li>
-        <li>
-          <button
-            class="btn-login"
-            [routerLink]="['/login']"
-            *ngIf="!currentUser?.id"
-          >
-            Login
-          </button>
-        </li>
+        <!-- <li>
+          <button class="btn-login" [routerLink]="['/login']" *ngIf="!currentUser?.id">Login</button>
+        </li> -->
         <li class="li-rote">
           <a [routerLink]="['/profile']">{{ currentUser.username }}</a>
         </li>
         <li>
-          <button class="btn-logout" (click)="logOut()">Log out</button>
+          <button class="btn-logout" (click)="logOut()" *ngIf="currentUser?.id">
+            Log out
+          </button>
         </li>
         <!-- <li>
           <button

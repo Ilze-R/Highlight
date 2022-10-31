@@ -55,6 +55,10 @@ export class AuthenticationService {
     this.currentUserSubject.next(new User());
   }
 
+  // public isLoggedIn() {
+  //   return this.getRoles() && this.getToken();
+  // }
+
   refreshToken(): Observable<any> {
     return this.http.post(
       API_URL + '/refresh-token?token=' + this.currentUserValue?.refreshToken,

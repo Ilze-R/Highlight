@@ -32,9 +32,17 @@ export class NavComponent implements OnInit {
     this.router.navigate(['/home']);
   }
 
+  // logIn(){
+  //   this.authenticationService.l
+  // }
+
   // public isLoggedIn() {
   //   return this.userAuthService.isLoggedIn();
   // }
+
+  isLoggedIn() {
+    return this.currentUser;
+  }
 
   // public logOut() {
   //   this.userAuthService.clear();

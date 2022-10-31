@@ -23,7 +23,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-import { LoggedUserComponent } from './logged-user/logged-user.component';
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -45,7 +44,6 @@ import { DetailComponent } from './detail/detail.component';
     FooterComponent,
     HowItWorksComponent,
     AdminPanelComponent,
-    LoggedUserComponent,
     NotFoundComponent,
     UnauthorizesComponent,
     DetailComponent,

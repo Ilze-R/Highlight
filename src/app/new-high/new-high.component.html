@@ -13,7 +13,13 @@
           <button [routerLink]="['/sign-up']" href="#" class="create">
             Sign up
           </button>
-          <button [routerLink]="['/join']" href="#" class="join">Join</button>
+          <button
+            class="login"
+            [routerLink]="['/login']"
+            *ngIf="!currentUser?.id"
+          >
+            Login
+          </button>
         </div>
       </div>
       <div class="landing-main-image">

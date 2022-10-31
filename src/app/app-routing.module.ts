@@ -9,11 +9,12 @@ import { AboutComponent } from './about/about.component';
 import { OpenGroupsComponent } from './open-groups/open-groups.component';
 import { MotivationComponent } from './motivation/motivation.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
-import { LoggedUserComponent } from './logged-user/logged-user.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { DetailComponent } from './detail/detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UnauthorizesComponent } from './unauthorizes/unauthorizes.component';
+import { AuthGuard } from './_guards/auth.guard';
+import { Role } from './_models/role.enum';
 
 const routes: Routes = [
   { path: 'home', component: NewHighComponent },
@@ -21,18 +22,31 @@ const routes: Routes = [
   { path: 'join', component: JoinComponent },
   { path: 'login', component: LoginComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'profile', component: LoggedUserComponent },
-  { path: 'admin', component: AdminPanelComponent },
-  { path: 'detail/:id', component: DetailComponent },
+  {
+    path: 'profile',
+    component: UserProfileComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.ADMIN, Role.USER] },
+  },
+  {
+    path: 'admin',
+    component: AdminPanelComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.ADMIN] },
+  },
+  {
+    path: 'detail/:id',
+    component: DetailComponent,
+    canActivate: [AuthGuard],
+    data: { roles: [Role.ADMIN] },
+  },
   { path: '404', component: NotFoundComponent },
   { path: '401', component: UnauthorizesComponent },
   { path: 'open-groups/:closed', component: OpenGroupsComponent },
   { path: 'groups/searh/:closed/:strict', component: OpenGroupsComponent },
   { path: 'search/:keyword', component: OpenGroupsComponent },
-
   { path: 'open-groups', component: OpenGroupsComponent },
   { path: 'motivation', component: MotivationComponent },
-  { path: 'user-profile', component: UserProfileComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];
