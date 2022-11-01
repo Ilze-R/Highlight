@@ -28,6 +28,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { UnauthorizesComponent } from './unauthorizes/unauthorizes.component';
 import { DetailComponent } from './detail/detail.component';
+import { authInterceptorProviders } from './_interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,7 @@ import { DetailComponent } from './detail/detail.component';
     RouterModule,
     FontAwesomeModule,
   ],
-  providers: [UsersService, GroupsService],
+  providers: [UsersService, GroupsService, authInterceptorProviders],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
