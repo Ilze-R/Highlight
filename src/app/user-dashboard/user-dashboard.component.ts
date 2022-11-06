@@ -46,6 +46,11 @@ export class UserDashboardComponent implements OnInit {
   stroke!: apex.ApexStroke;
   markers!: apex.ApexMarkers;
   grid!: apex.ApexGrid;
+  fillRadial!: apex.ApexFill;
+  plotOptions!: apex.ApexPlotOptions;
+  strokeRadial!: apex.ApexStroke;
+  chartRadial!: apex.ApexChart;
+  seriesRadial: apex.ApexAxisChartSeries | any;
 
   currentUser: User = new User();
   errorMessage: string = '';
@@ -80,6 +85,7 @@ export class UserDashboardComponent implements OnInit {
       this.currentUser = data;
     });
     this.initializeChartOptions();
+    this.initializeRadialChart();
   }
 
   private initializeChartOptions(): void {
@@ -119,6 +125,40 @@ export class UserDashboardComponent implements OnInit {
     // var chart = new ApexCharts(document.querySelector("#chart"), options);
 
     // chart.render();
+  }
+
+  private initializeRadialChart() {
+    this.seriesRadial = [50];
+    this.chartRadial = {
+      height: 280,
+      type: 'radialBar',
+    };
+    this.fillRadial = {
+      colors: ['#FFB100'],
+    };
+    this.strokeRadial = {
+      lineCap: 'round',
+    };
+    this.plotOptions = {
+      radialBar: {
+        hollow: {
+          size: '60%',
+        },
+        dataLabels: {
+          name: {
+            show: false,
+          },
+          // value: {
+          //   // formatter: function (val: string) {
+          //   //   return parseInt(val);
+          //   // },
+          //   color: '#777',
+          //   fontSize: '40px',
+          //   fontWeight: 500,
+          // },
+        },
+      },
+    };
   }
 
   changeRole() {

@@ -171,7 +171,40 @@
               </div>
             </div>
           </div>
-          <div class="card emails-card"></div>
+          <div class="card emails-card">
+            <div class="card-head">Email sent</div>
+            <div class="card-body">
+              <div id="emailChart">
+                <apx-chart
+                  [series]="seriesRadial"
+                  [chart]="chartRadial"
+                  [fill]="fillRadial"
+                  [stroke]="strokeRadial"
+                  [plotOptions]="plotOptions"
+                ></apx-chart>
+              </div>
+            </div>
+            <div class="card-footerr">
+              <div class="emails-info">
+                <div class="email-stat">
+                  <span class="status bg-danger"></span>
+                  <span>30 not sent</span>
+                </div>
+                <div class="email-stat">
+                  <span class="status bg-warning"></span>
+                  <span>38 opened</span>
+                </div>
+                <div class="email-stat">
+                  <span class="status bg-sucess"></span>
+                  <span>68 success</span>
+                </div>
+                <div class="email-stat">
+                  <span class="status bg-danger"></span>
+                  <span>SMT error</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </main>
     </div>

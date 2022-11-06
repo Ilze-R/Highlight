@@ -271,6 +271,53 @@ header label {
   padding: 1.5rem 2rem;
 }
 
+.card-footerr {
+  padding: 1rem 2rem;
+}
+
+.emails-card .card-body {
+  padding: 0.3rem;
+}
+
 .chart-wrapper {
   padding-top: 1rem 0rem;
+}
+
+.emails-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+.bg-success {
+  background: #28a745;
+  color: #fff;
+}
+
+.bg-danger {
+  background: #dc3545;
+  color: #fff;
+}
+
+.bg-warning {
+  background: #ffb100;
+  color: #fff;
+}
+
+.email-stat {
+  display: flex;
+  align-items: center;
+}
+
+.email-stat span {
+  display: inline-block;
+}
+
+.email-stat .status {
+  height: 15px;
+  width: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }
