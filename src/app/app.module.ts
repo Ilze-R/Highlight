@@ -13,7 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { OpenGroupsComponent } from './open-groups/open-groups.component';
 import { MotivationComponent } from './motivation/motivation.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { UsersService } from './_services/users.service';
@@ -29,6 +29,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UnauthorizesComponent } from './unauthorizes/unauthorizes.component';
 import { DetailComponent } from './detail/detail.component';
 import { authInterceptorProviders } from './_interceptors/auth.interceptor';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { authInterceptorProviders } from './_interceptors/auth.interceptor';
     AboutComponent,
     OpenGroupsComponent,
     MotivationComponent,
-    UserProfileComponent,
+    UserDashboardComponent,
     FooterComponent,
     HowItWorksComponent,
     AdminPanelComponent,
@@ -58,6 +59,7 @@ import { authInterceptorProviders } from './_interceptors/auth.interceptor';
     NgbModule,
     RouterModule,
     FontAwesomeModule,
+    NgApexchartsModule,
   ],
   providers: [UsersService, GroupsService, authInterceptorProviders],
   bootstrap: [AppComponent],

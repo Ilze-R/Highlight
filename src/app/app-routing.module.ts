@@ -8,7 +8,7 @@ import { LoginComponent } from './login/login.component';
 import { AboutComponent } from './about/about.component';
 import { OpenGroupsComponent } from './open-groups/open-groups.component';
 import { MotivationComponent } from './motivation/motivation.component';
-import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { DetailComponent } from './detail/detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -24,7 +24,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   {
     path: 'profile',
-    component: UserProfileComponent,
+    component: UserDashboardComponent,
     canActivate: [AuthGuard],
     data: { roles: [Role.ADMIN, Role.USER] },
   },

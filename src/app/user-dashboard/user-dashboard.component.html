@@ -1,0 +1,229 @@
+<!-- <p *ngFor="let tempUsers of users">
+  {{ tempUsers.username }}: {{ tempUsers.email }}
+</p> -->
+<!-- <app-nav></app-nav> -->
+
+<body>
+  <div class="pagee-wrapperr">
+    <input type="checkbox" name="" id="menu-toggle" />
+
+    <div class="sidebarr">
+      <div class="brand">
+        <h3>
+          <span class="lab la-untappd"
+            ><fa-icon [icon]="faCampground"></fa-icon
+          ></span>
+          Pacers
+        </h3>
+      </div>
+
+      <div class="profile-card">
+        <div
+          class="profile-img"
+          style="background-image: url(profilepic.jpeg)"
+        ></div>
+        <div class="profile-info">
+          <h2>Tom Tomm</h2>
+          <small>Wed designer</small>
+        </div>
+        <div class="profile-action">
+          <a href="" class="btn btn-white">
+            <span class="las la-coins"
+              ><fa-icon [icon]="faCoins"></fa-icon
+            ></span>
+            $2,300
+          </a>
+        </div>
+        <div class="profile-icons">
+          <span class="las la-user"><fa-icon [icon]="faUser"></fa-icon></span>
+          <span class="las la-comment-alt"
+            ><fa-icon [icon]="faMessage"></fa-icon
+          ></span>
+          <span class="las la-file-invoice"
+            ><fa-icon [icon]="faFileInvoice"></fa-icon
+          ></span>
+        </div>
+      </div>
+
+      <div class="sidebar-menu">
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-home"
+              ><fa-icon [icon]="faHouse"></fa-icon
+            ></span>
+            <span>Home</span>
+          </a>
+        </div>
+
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-project-diagram"
+              ><fa-icon [icon]="faDiagramProject"></fa-icon
+            ></span>
+            <span>Projects</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="" class="active">
+            <span class="las la-tasks"
+              ><fa-icon [icon]="faListCheck"></fa-icon
+            ></span>
+            <span>Tasks</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-columns"
+              ><fa-icon [icon]="faTableColumns"></fa-icon
+            ></span>
+            <span>Something</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-users-cog"
+              ><fa-icon [icon]="faUsers"></fa-icon
+            ></span>
+            <span>Users</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-user-ninja"
+              ><fa-icon [icon]="faUser"></fa-icon
+            ></span>
+            <span>Profile</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-file-invoices"
+              ><fa-icon [icon]="faFileInvoice"></fa-icon
+            ></span>
+            <span>Invoices</span>
+          </a>
+        </div>
+        <div class="menu-item">
+          <a href="">
+            <span class="las la-cogs"
+              ><fa-icon [icon]="faGears"></fa-icon
+            ></span>
+            <span>Widgets</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <h3>Hello Tom</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eaque
+          sit nobis quo. Voluptas adipisci corrupti voluptate aliquam eaque non!
+        </p>
+        <a href="" class="btn btn-block btn-white">Get started</a>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <header>
+        <label for="menu-toggle">
+          <span class="las la-bars"><fa-icon [icon]="faBars"></fa-icon></span>
+        </label>
+
+        <div class="head-icon">
+          <span class="las la-search"
+            ><fa-icon [icon]="faMagnifyingGlass"></fa-icon
+          ></span>
+
+          <span class="las la-comment-alt"
+            ><fa-icon [icon]="faMessage"></fa-icon
+          ></span>
+          <span class="las la-bell"><fa-icon [icon]="faBell"></fa-icon></span>
+          <div class="head-avatar">
+            <div
+              class="avatar"
+              style="background-image: url(teampic.png)"
+            ></div>
+            <span>Some Tom</span>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="page-header">
+          <h1>Some Morning</h1>
+          <small>Do something</small>
+        </div>
+
+        <div class="analytics">
+          <div class="card engage-card">
+            <div class="card-head">Engagement</div>
+            <div class="card-body">
+              <div class="chart-wrapper">
+                <div id="chart">
+                  <apx-chart
+                    [series]="series"
+                    [chart]="chart"
+                    [stroke]="stroke"
+                    [xaxis]="xaxis"
+                    [markers]="markers"
+                    [grid]="grid"
+                  ></apx-chart>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card emails-card"></div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="./user-dashboard.component.js"></script>
+</body>
+
+<!-- <div class="user-dashboard-wrapper">
+  <div class="left-side-pannel">
+    <div class="avatar"></div>
+    <div class="highlight-pannel"></div>
+    <div class="profile"></div>
+    <div class="settings"></div>
+    <div class="create-group"></div>
+    <div class="my-groups"></div>
+    <div class="messages"></div>
+    <div class=""></div>
+  </div>
+
+  <div class="middle-wrapper">
+    <div class="today-highlight"></div>
+
+    <div class="group-highlights"></div>
+
+    <div class="progress-chart"></div>
+  </div>
+
+  <div class="right-side-wrapper">
+    <div class="chat"></div>
+  </div>
+</div> -->
+
+<!-- <div class="pt-5">
+  <div class="alert alert-danger" *ngIf="errorMessage">{{ errorMessage }}</div>
+
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <div class="col-6">
+          <h3>User Details</h3>
+        </div>
+        <div class="col-6 text-end">
+          Current role is <strong>{{ currentUser.role }}</strong>
+          <button class="btn btn-primary" (click)="changeRole()">
+            Change role
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <p><strong>Name: </strong>{{ currentUser.name }}</p>
+      <p><strong>Username: </strong>{{ currentUser.username }}</p>
+    </div>
+  </div>
+</div> -->
