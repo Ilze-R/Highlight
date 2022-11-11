@@ -68,7 +68,7 @@ body {
 }
 
 .profile-img {
-  background-image: url(profilepic.jpeg);
+  background-image: url(src/app/user-dashboard/profilepic.jpeg);
   height: 100px;
   width: 100px;
   border-radius: 50%;
@@ -159,11 +159,7 @@ body {
   margin-bottom: 0.9rem;
 }
 
-/* .menu-item a.active {
-  background: rgb(218, 216, 216);
-} */
-
-.active {
+.menu-item a.active {
   background: rgb(218, 216, 216);
 }
 
@@ -204,17 +200,6 @@ body {
   flex: 1;
 }
 
-header {
-  height: 20px;
-  border-bottom: 0.9px solid black;
-  color: #fff;
-}
-
-header label {
-  display: inline-block;
-  font-size: 1.4rem;
-}
-
 .head-icons {
   display: flex;
   align-items: center;
@@ -248,36 +233,10 @@ header label {
   font-weight: 600;
 }
 
-.page-header {
-  color: #fff;
-  margin: 1.5rem 0rem;
-}
-
-.analytics {
-  display: grid;
-  grid-template-columns: 65% auto;
-  grid-gap: 2rem;
-  margin-top: 3rem;
-}
-
 .card {
   background: #fff;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
-}
-
-.greetings-card {
-  padding: 1rem 2rem;
-}
-
-.create-join-card {
-  padding: 1rem 2rem;
-  margin-top: 3rem;
-}
-
-.calendar-wrap {
-  margin: 2%;
-  padding: 1rem 2rem;
 }
 
 .btn-one-line-wrap {
@@ -300,37 +259,6 @@ header label {
   width: fit-content;
 }
 
-.card-head {
-  font-size: 1rem;
-  color: #555;
-  font-weight: 600;
-  padding: 1rem 2rem;
-  border-bottom: 1px solid #eee;
-}
-
-.card-body {
-  padding: 1.5rem 2rem;
-}
-
-.card-footerr {
-  padding: 1rem 2rem;
-}
-
-.emails-card .card-body {
-  padding: 0.3rem;
-}
-
-.chart-wrapper {
-  padding-top: 1rem 0rem;
-}
-
-.emails-info {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1rem;
-  padding-bottom: 2rem;
-}
-
 .bg-success {
   background: #28a745;
   color: #fff;
@@ -346,219 +274,37 @@ header label {
   color: #fff;
 }
 
-.email-stat {
-  display: flex;
-  align-items: center;
-}
-
-.email-stat span {
-  display: inline-block;
-}
-
-.email-stat .status {
-  height: 15px;
-  width: 15px;
-  display: inline-block;
-  border-radius: 50%;
-  margin-right: 0.5rem;
-}
-
 img {
   width: 100%;
   height: auto;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-table tr {
-  border-bottom: 1px solid #efefef;
-}
-
-table tr:last-child {
-  border-bottom: none;
-}
-
-table tr td,
-table tr th {
-  padding: 1.2rem 1rem;
-}
-
-table tr th {
-  text-align: left;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-table small {
-  font-weight: 600;
-  color: rgb(158, 157, 157);
-
-  font-weight: 300;
-  font-size: 0.8rem;
-}
-
-table h4,
-table h3,
-.competitors .card-body h3,
-.competitors .card-body h4 {
-  color: #333;
-  margin-bottom: 0.3rem;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-.grid-2 {
-  margin-top: 3.5rem;
-  display: grid;
-  grid-template-columns: 65% auto;
-  grid-gap: 2rem;
-  margin-bottom: 3.5rem;
-}
-
-.team-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.team-head small {
-  color: #8492a6;
-  font-weight: 600;
-}
-
-.team-head select {
-  display: inline-block;
-  height: 38px;
-  padding: 0.5rem 2rem;
-  border-radius: 8px;
-  background: #efefef;
-  border: none;
-  outline: none;
-}
-
-.team-info {
-  display: flex;
-  align-items: center;
-}
-
-.team-img {
-  height: 50px;
-  width: 50px;
-  border-radius: 8px;
-  background: #f8f8fb;
-  margin-right: 0.7rem;
-  padding: 0.8rem;
-}
-
-.team-progress > h4 {
-  color: #8492a6;
-  margin-bottom: 0.5rem;
-}
-
-.progress-bar {
-  width: 100%;
-  background: #efefef;
-  position: relative;
-  border-radius: 10px;
-  height: 15px;
-}
-
-.indicator {
-  height: 100%;
-  border-radius: 10px;
-}
-
-.indicator.success {
-  background: #28a745;
-}
-
-.indicator.danger {
-  background: #dc3545;
-}
-.indicator.info {
-  background: #6e00ff;
-}
-.indicator.warning {
-  background: #ffb100;
-}
-
-.compete-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.3rem;
-}
-
-.compete-info > div:first-child {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-right: 0.7rem;
-}
-
-.compete-info img {
-  width: 100px;
-  border-radius: 10px;
-  margin-right: 0.7rem;
-}
-
-.competitors .card-body {
-  padding: 1rem;
-}
-
-.compete-details small {
-  display: inline-block;
-  margin-bottom: 0.3rem;
-}
-
-.compete-details p > a {
-  color: #6e00ff;
-  font-weight: 600;
-}
-
-.compete-sales {
-  text-align: right;
-}
-
-.compete-sales span {
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.compete-sales h3 {
-  color: #444 !important;
-  font-size: 1.04rem !important;
-}
-
 .home-icon {
-  background-image: url(home.png);
+  background-image: url(src/app/user-dashboard/home.png);
   background-size: cover;
   width: 1.7rem;
 }
 
 .list-icon {
-  background-image: url(highlighter.png);
+  background-image: url(src/app/user-dashboard/highlighter.png);
   background-size: cover;
   width: 1.7rem;
 }
 
 .profile-icon {
-  background-image: url(user.png);
+  background-image: url(src/app/user-dashboard/user.png);
   background-size: cover;
   width: 1.7rem;
 }
 
 .mygroups-icon {
-  background-image: url(group.png);
+  background-image: url(src/app/user-dashboard/group.png);
   background-size: cover;
   width: 1.7rem;
 }
 
 .chat-icon {
-  background-image: url(speech-bubble.png);
+  background-image: url(src/app/user-dashboard/speech-bubble.png);
   background-size: cover;
   width: 1.7rem;
 }

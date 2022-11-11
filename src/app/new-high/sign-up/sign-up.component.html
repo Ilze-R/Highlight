@@ -103,18 +103,18 @@
         </div>
 
         <div class="form-group">
-          <label for="name">Full Name</label>
+          <label for="email">Email</label>
           <input
             type="text"
-            id="name"
-            name="name"
-            [(ngModel)]="user.name"
-            #name="ngModel"
+            id="email"
+            name="email"
+            [(ngModel)]="user.email"
+            #email="ngModel"
             class="form-control"
             required
           />
-          <div class="alert-danger" *ngIf="!name.valid && f.submitted">
-            Full name is required.
+          <div class="alert-danger" *ngIf="!email && f.submitted">
+            Email is required.
           </div>
         </div>
 

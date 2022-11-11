@@ -1,7 +1,7 @@
 <!-- <p *ngFor="let tempUsers of users">
   {{ tempUsers.username }}: {{ tempUsers.email }}
 </p> -->
-<!-- <app-nav></app-nav> -->
+<app-nav></app-nav>
 
 <body>
   <div class="pagee-wrapperr">
@@ -9,12 +9,7 @@
 
     <div class="sidebarr">
       <div class="brand">
-        <h3>
-          <span class="lab la-untappd"
-            ><fa-icon [icon]="faCampground"></fa-icon
-          ></span>
-          Pacers
-        </h3>
+        <!-- highlight logo -->
       </div>
 
       <div class="profile-card">
@@ -23,18 +18,13 @@
           style="background-image: url(profilepic.jpeg)"
         ></div>
         <div class="profile-info">
-          <h2>Tom Tomm</h2>
-          <small>Wed designer</small>
+          <h2>{{ currentUser.username }}</h2>
+          <!-- <small>Wed designer</small> -->
         </div>
-        <div class="profile-action">
-          <a href="" class="btn btn-white">
-            <span class="las la-coins"
-              ><fa-icon [icon]="faCoins"></fa-icon
-            ></span>
-            $2,300
-          </a>
-        </div>
-        <div class="profile-icons">
+        <!-- <div class="profile-action">
+          <a href="" class="btn btn-white"> New group </a>
+        </div> -->
+        <!-- <div class="profile-icons">
           <span class="las la-user"><fa-icon [icon]="faUser"></fa-icon></span>
           <span class="las la-comment-alt"
             ><fa-icon [icon]="faMessage"></fa-icon
@@ -42,95 +32,87 @@
           <span class="las la-file-invoice"
             ><fa-icon [icon]="faFileInvoice"></fa-icon
           ></span>
-        </div>
+        </div> -->
       </div>
 
       <div class="sidebar-menu">
         <div class="menu-item">
-          <a href="">
+          <a
+            [routerLink]="['/profile/home']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             <span class="las la-home"
-              ><fa-icon [icon]="faHouse"></fa-icon
-            ></span>
+              ><img class="home-icon" src="home.png" alt=""
+            /></span>
             <span>Home</span>
           </a>
         </div>
 
         <div class="menu-item">
-          <a href="">
+          <a
+            [routerLink]="['/profile/highlights']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             <span class="las la-project-diagram"
-              ><fa-icon [icon]="faDiagramProject"></fa-icon
-            ></span>
-            <span>Projects</span>
+              ><img class="list-icon" src="highlighter.png" alt=""
+            /></span>
+            <span>Highlights</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="" class="active">
+          <a
+            [routerLink]="['/profile/profile']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             <span class="las la-tasks"
-              ><fa-icon [icon]="faListCheck"></fa-icon
-            ></span>
-            <span>Tasks</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="">
-            <span class="las la-columns"
-              ><fa-icon [icon]="faTableColumns"></fa-icon
-            ></span>
-            <span>Something</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="">
-            <span class="las la-users-cog"
-              ><fa-icon [icon]="faUsers"></fa-icon
-            ></span>
-            <span>Users</span>
-          </a>
-        </div>
-        <div class="menu-item">
-          <a href="">
-            <span class="las la-user-ninja"
-              ><fa-icon [icon]="faUser"></fa-icon
-            ></span>
+              ><img class="profile-icon" src="user.png" alt=""
+            /></span>
             <span>Profile</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="">
-            <span class="las la-file-invoices"
-              ><fa-icon [icon]="faFileInvoice"></fa-icon
-            ></span>
-            <span>Invoices</span>
+          <a
+            [routerLink]="['/profile/my-groups']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <span class="las la-columns"
+              ><img class="mygroups-icon" src="group.png" alt=""
+            /></span>
+            <span>My groups</span>
           </a>
         </div>
         <div class="menu-item">
-          <a href="">
-            <span class="las la-cogs"
-              ><fa-icon [icon]="faGears"></fa-icon
-            ></span>
-            <span>Widgets</span>
+          <a
+            [routerLink]="['/profile/chat']"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            <span class="las la-users-cog"
+              ><img class="chat-icon" src="speech-bubble.png" alt=""
+            /></span>
+            <span>Chat</span>
           </a>
         </div>
       </div>
 
       <div class="sidebar-card">
-        <h3>Hello Tom</h3>
+        <h3>Hello {{ currentUser.username }}</h3>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero eaque
           sit nobis quo. Voluptas adipisci corrupti voluptate aliquam eaque non!
         </p>
-        <a href="" class="btn btn-block btn-white">Get started</a>
+        <a href="" class="btn btn-block btn-white">New group</a>
       </div>
     </div>
 
     <div class="main-content">
       <header>
-        <label for="menu-toggle">
-          <span class="las la-bars"><fa-icon [icon]="faBars"></fa-icon></span>
-        </label>
-
         <div class="head-icon">
-          <span class="las la-search"
+          <!-- <span class="las la-search"
             ><fa-icon [icon]="faMagnifyingGlass"></fa-icon
           ></span>
 
@@ -144,13 +126,35 @@
               style="background-image: url(teampic.png)"
             ></div>
             <span>Some Tom</span>
-          </div>
+          </div> -->
         </div>
       </header>
       <main>
         <div class="page-header">
-          <h1>Some Morning</h1>
-          <small>Do something</small>
+          <!-- <h1>Some Morning</h1>
+          <small>Do something</small> -->
+        </div>
+        <!-- GREETING CARD -->
+        <div class="card greetings-card">
+          <h2>Good day, {{ currentUser.username }}</h2>
+          <br />
+          <p>Ready to start your day with highligh?!</p>
+          <div class="btn-one-line-wrap">
+            <button class="btn-group">Group name</button>
+          </div>
+        </div>
+
+        <!-- CREATE/JOIN GROUP CARD -->
+        <div class="card create-join-card">
+          <p>some text some text some text</p>
+          <div class="btn-one-line-wrap">
+            <button class="btn-group">Create</button>
+            <button class="btn-group">Join</button>
+          </div>
+        </div>
+
+        <div class="card calendar-wrap">
+          <ejs-calendar></ejs-calendar>
         </div>
 
         <div class="analytics">
@@ -206,6 +210,208 @@
             </div>
           </div>
         </div>
+        <!-- bottom cards -->
+        <div class="grid-2">
+          <div class="card team-progress">
+            <div class="card-head">
+              <div class="team-head">
+                <div>
+                  <h3>Team progress</h3>
+                  <small>890, 344 sales</small>
+                </div>
+                <select name="" id="">
+                  <option value="">User</option>
+                </select>
+              </div>
+            </div>
+            <div class="card-body">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Author</th>
+                    <th>Company</th>
+                    <th width="22%">Progress</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="team-info">
+                        <div class="team-img">
+                          <img src="" alt="" />
+                        </div>
+                        <div class="team-details">
+                          <h4>Brad Simons</h4>
+                          <small>HTML, JS, React JS</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="company-info">
+                        <h4>Interco</h4>
+                        <small>Web UI/UX Design</small>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="team-progress">
+                        <h4>65%</h4>
+                        <div class="progress-bar">
+                          <div
+                            class="indicator danger"
+                            style="width: 65%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="" class="btn btn-main">View</a>
+                    </td>
+                  </tr>
+                  <!-- SECOND TABLE -->
+                  <tr>
+                    <td>
+                      <div class="team-info">
+                        <div class="team-img">
+                          <img src="" alt="" />
+                        </div>
+                        <div class="team-details">
+                          <h4>Jessie Clarkson</h4>
+                          <small>HTML, JS, React JS</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="company-info">
+                        <h4>Agoda</h4>
+                        <small>Houses & Hotels</small>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="team-progress">
+                        <h4>85%</h4>
+                        <div class="progress-bar">
+                          <div
+                            class="indicator success"
+                            style="width: 85%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="" class="btn btn-main">View</a>
+                    </td>
+                  </tr>
+                  <!-- THIRD TABLE -->
+                  <tr>
+                    <td>
+                      <div class="team-info">
+                        <div class="team-img">
+                          <img src="" alt="" />
+                        </div>
+                        <div class="team-details">
+                          <h4>Brad Simons</h4>
+                          <small>HTML, JS, React JS</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="company-info">
+                        <h4>Interco</h4>
+                        <small>Web UI/UX Design</small>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="team-progress">
+                        <h4>65%</h4>
+                        <div class="progress-bar">
+                          <div class="indicator info" style="width: 55%"></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="" class="btn btn-main">View</a>
+                    </td>
+                  </tr>
+                  <!-- FOURTH TABLE -->
+                  <tr>
+                    <td>
+                      <div class="team-info">
+                        <div class="team-img">
+                          <img src="" alt="" />
+                        </div>
+                        <div class="team-details">
+                          <h4>Brad Simons</h4>
+                          <small>HTML, JS, React JS</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="company-info">
+                        <h4>Interco</h4>
+                        <small>Web UI/UX Design</small>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="team-progress">
+                        <h4>22%</h4>
+                        <div class="progress-bar">
+                          <div
+                            class="indicator warning"
+                            style="width: 22%"
+                          ></div>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="" class="btn btn-main">View</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card competitors">
+            <div class="card-head">
+              <div class="team-head">
+                <div>
+                  <h4>My Competitors</h4>
+                  <small>More than 400+ new members</small>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="compete-info">
+                <div>
+                  <img src="" alt="" />
+                  <div class="compete-details">
+                    <h4>Cup & Green</h4>
+                    <small>Study highway types</small>
+                    <p>By: <a href="">Code resource</a></p>
+                  </div>
+                </div>
+                <div class="compete-sales">
+                  <h3>24.900</h3>
+                  <span>Sales</span>
+                </div>
+              </div>
+              <div class="compete-info">
+                <div>
+                  <img src="" alt="" />
+                  <div class="compete-details">
+                    <h4>Cup & Green</h4>
+                    <small>Study highway types</small>
+                    <p>By: <a href="">Code resource</a></p>
+                  </div>
+                </div>
+                <div class="compete-sales">
+                  <h3>24.900</h3>
+                  <span>Sales</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
   </div>
@@ -213,6 +419,7 @@
 </body>
 
 <!-- <div class="user-dashboard-wrapper">
+ 
   <div class="left-side-pannel">
     <div class="avatar"></div>
     <div class="highlight-pannel"></div>
