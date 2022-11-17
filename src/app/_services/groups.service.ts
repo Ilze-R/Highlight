@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Groups } from '../_common/groups';
+// import { Groups } from '../_common/groups';
+import { Group } from '../_models/group.model';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -9,42 +10,58 @@ import { map } from 'rxjs/operators';
 })
 export class GroupsService {
   private baseUrl = 'http://localhost:8080/api/groups';
-  posts!: Observable<Groups>;
-  constructor(private httpClient: HttpClient) {}
-  getGroupsPaginate(
-    thePage: number,
-    thePageSize: number,
-    theGroupsCloseStatus: boolean
-  ): Observable<GetResponse> {
-    const searchUrl =
-      `${this.baseUrl}/search/findByClosed?closed=${theGroupsCloseStatus}` +
-      `&page=${thePage}&size=${thePageSize}`;
-    return this.httpClient.get<GetResponse>(searchUrl);
+  private groupsUrl!: string;
+  posts!: Observable<Group>;
+
+  constructor(private httpClient: HttpClient) {
+    this.groupsUrl = 'http://localhost:8080/groups';
   }
-  getGroupsClosedStatus(theGroupsCloseStatus: boolean): Observable<Groups[]> {
-    const searchUrl = `${this.baseUrl}/search/findByClosed?closed=${theGroupsCloseStatus}`;
-    return this.httpClient
-      .get<GetResponse>(searchUrl)
-      .pipe(map((response) => response._embedded.groups));
+
+  public findAll(): Observable<Group[]> {
+    return this.httpClient.get<Group[]>(this.groupsUrl);
   }
-  searchGroups(theKeyword: string): Observable<Groups[]> {
-    const searchUrl = `${this.baseUrl}/search/findByGroupNameContaining?group_name=${theKeyword}`;
-    return this.getGroups(searchUrl);
+
+  public save(group: Group){
+    return this.httpClient.post<Group>(this.groupsUrl, group);
   }
-  private getGroups(searchUrl: string): Observable<Groups[]> {
-    return this.httpClient
-      .get<GetResponse>(searchUrl)
-      .pipe(map((response) => response._embedded.groups));
-  }
-}
-interface GetResponse {
-  _embedded: {
-    groups: Groups[];
-  };
-  page: {
-    size: number;
-    totalElements: number;
-    totalPages: number;
-    number: number;
-  };
+
+  //   getGroupsPaginate(
+  //     thePage: number,
+  //     thePageSize: number,
+  //     theGroupsCloseStatus: boolean
+  //   ): Observable<GetResponse> {
+  //     const searchUrl =
+  //       `${this.baseUrl}/search/findByOpen?open=${theGroupsCloseStatus}` +
+  //       `&page=${thePage}&size=${thePageSize}`;
+  //     return this.httpClient.get<GetResponse>(searchUrl);
+  //   }
+
+  //   getGroupsClosedStatus(theGroupsCloseStatus: boolean): Observable<Group[]> {
+  //     const searchUrl = `${this.baseUrl}/search/findByOpen?open=${theGroupsCloseStatus}`;
+  //     return this.httpClient
+  //       .get<GetResponse>(searchUrl)
+  //       .pipe(map((response) => response._embedded.groups));
+  //   }
+
+  //   searchGroups(theKeyword: string): Observable<Group[]> {
+  //     const searchUrl = `${this.baseUrl}/search/findByGroupNameContaining?group_name=${theKeyword}`;
+  //     return this.getGroups(searchUrl);
+  //   }
+
+  //   private getGroups(searchUrl: string): Observable<Group[]> {
+  //     return this.httpClient
+  //       .get<GetResponse>(searchUrl)
+  //       .pipe(map((response) => response._embedded.groups));
+  //   }
+  // }
+  // interface GetResponse {
+  //   _embedded: {
+  //     groups: Group[];
+  //   };
+  //   page: {
+  //     size: number;
+  //     totalElements: number;
+  //     totalPages: number;
+  //     number: number;
+  //   };
 }

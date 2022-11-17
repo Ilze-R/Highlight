@@ -1,7 +1,7 @@
 <app-nav></app-nav>
 <!-- <p>Description: {{ tempGroups.description }}</p>-->
-<div class="top-sort">
-  <form id="form">
+<div class="top-sort" *ngFor="let temGroups of groups">
+  <!-- <form id="form">
     <input
       #myInput
       type="text"
@@ -10,12 +10,12 @@
       placeholder="search"
       (keyup.enter)="doSearch(myInput.value)"
     />
-  </form>
-  <button (click)="onStrictClick()">
+  </form> -->
+  <!-- <button (click)="onStrictClick()">
     {{ strictButton ? "strict" : "non strict" }}
-  </button>
-
-  <button class="second-button">size</button>
+  </button> -->
+  <p>{{ temGroups.size }}</p>
+  <button class="second-button">size : {{ temGroups.groupName }}</button>
 </div>
 <div class="flex-cards">
   <div *ngFor="let tempGroups of groups" class="ngfor">
@@ -38,13 +38,13 @@
         }}
       </p>
       <p class="description">{{ tempGroups.description }}</p>
-      <p>{{ tempGroups.closed }}</p>
+      <p>{{ tempGroups.groupName }}</p>
     </div>
   </div>
 </div>
 
 <div class="pagination-wrap">
-  <ngb-pagination
+  <!-- <ngb-pagination
     class="d-flex justify-content-center"
     [(page)]="thePageNumber"
     [pageSize]="thePageSize"
@@ -53,5 +53,5 @@
     [boundaryLinks]="true"
     (pageChange)="listGroups()"
   >
-  </ngb-pagination>
+  </ngb-pagination> -->
 </div>

@@ -15,11 +15,11 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { UnauthorizesComponent } from './unauthorizes/unauthorizes.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { Role } from './_models/role.enum';
-import { HomeComponent } from './user-dashboard/home/home.component';
 import { HighlightsComponent } from './user-dashboard/highlights/highlights.component';
 import { ProfileComponent } from './user-dashboard/profile/profile.component';
 import { MyGroupsComponent } from './user-dashboard/my-groups/my-groups.component';
 import { ChatComponent } from './user-dashboard/chat/chat.component';
+import { CreateNewGroupComponent } from './create-new-group/create-new-group.component';
 
 const routes: Routes = [
   { path: 'home', component: NewHighComponent },
@@ -38,6 +38,7 @@ const routes: Routes = [
   { path: 'profile/profile', component: ProfileComponent },
   { path: 'profile/my-groups', component: MyGroupsComponent },
   { path: 'profile/chat', component: ChatComponent },
+  { path: 'profile/create', component: CreateNewGroupComponent },
   {
     path: 'admin',
     component: AdminPanelComponent,
@@ -52,10 +53,11 @@ const routes: Routes = [
   },
   { path: '404', component: NotFoundComponent },
   { path: '401', component: UnauthorizesComponent },
-  { path: 'open-groups/:closed', component: OpenGroupsComponent },
-  { path: 'groups/searh/:closed/:strict', component: OpenGroupsComponent },
+  { path: 'groups', component: OpenGroupsComponent },
+  { path: 'open-groups/:open', component: OpenGroupsComponent },
+  { path: 'groups/searh/:open/:strict', component: OpenGroupsComponent },
   { path: 'search/:keyword', component: OpenGroupsComponent },
-  { path: 'open-groups', component: OpenGroupsComponent },
+
   { path: 'motivation', component: MotivationComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },

@@ -1,0 +1,148 @@
+.containerr {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 0.1px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 3rem 30rem 20rem 30rem;
+  background-color: #fff;
+  padding: 20px 40px 120px 40px;
+}
+
+.grey-container {
+  background-color: #f6f6f6;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.group-name-wrap,
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+textarea {
+  height: 200px;
+}
+.checkbox-container {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 300;
+  display: flex;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  gap: 1.5rem;
+}
+.main-input,
+.select,
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: solid #bea6a1 1px;
+  font-size: 15px;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+input[type="text"] {
+  font: inherit;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.close {
+  font-size: 36px;
+  font-weight: 200;
+  margin-left: 94%;
+  color: #939393;
+  cursor: pointer;
+}
+
+select {
+  font: inherit;
+  display: inline-block;
+  background-image: linear-gradient(45deg, transparent 50%, #e44232 50%),
+    linear-gradient(135deg, #e44232 50%, transparent 50%),
+    linear-gradient(to right, #e44232, #e44232);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+}
+
+.check {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: #eee;
+}
+
+.check:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.check input:checked ~ .checkmark {
+  background-color: #e44232;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+.check .checkmark:after {
+  left: 6px;
+  top: 4px;
+  width: 3px;
+  height: 5px;
+  border: solid white;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+button {
+  font: inherit;
+  font-size: 15px;
+  letter-spacing: 0.1px;
+  border: solid #e44232 1px;
+  background-color: #e44232;
+  color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+hr {
+  border-top: 0.7px solid #939393;
+  border-bottom: 0;
+  margin: 0;
+}

@@ -139,6 +139,7 @@
           <h2>Good day, {{ currentUser.username }}</h2>
           <br />
           <p>Ready to start your day with highligh?!</p>
+          <p>CHALLENGES IDEA</p>
           <div class="btn-one-line-wrap">
             <button class="btn-group">Group name</button>
           </div>
@@ -146,9 +147,14 @@
 
         <!-- CREATE/JOIN GROUP CARD -->
         <div class="card create-join-card">
-          <p>some text some text some text</p>
+          <p>
+            Don't have a group? Create your own or join existing one with
+            invitation code or browse our open groups!
+          </p>
           <div class="btn-one-line-wrap">
-            <button class="btn-group">Create</button>
+            <button [routerLink]="['/profile/create']" class="btn-group">
+              Create
+            </button>
             <button class="btn-group">Join</button>
           </div>
         </div>

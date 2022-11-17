@@ -30,12 +30,13 @@ import { UnauthorizesComponent } from './unauthorizes/unauthorizes.component';
 import { DetailComponent } from './detail/detail.component';
 import { authInterceptorProviders } from './_interceptors/auth.interceptor';
 import { NgApexchartsModule } from 'ng-apexcharts';
-import { HomeComponent } from './user-dashboard/home/home.component';
+
 import { HighlightsComponent } from './user-dashboard/highlights/highlights.component';
 import { ProfileComponent } from './user-dashboard/profile/profile.component';
 import { MyGroupsComponent } from './user-dashboard/my-groups/my-groups.component';
 import { ChatComponent } from './user-dashboard/chat/chat.component';
 import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
+import { CreateNewGroupComponent } from './create-new-group/create-new-group.component';
 
 @NgModule({
   declarations: [
@@ -55,11 +56,11 @@ import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
     NotFoundComponent,
     UnauthorizesComponent,
     DetailComponent,
-    HomeComponent,
     HighlightsComponent,
     ProfileComponent,
     MyGroupsComponent,
     ChatComponent,
+    CreateNewGroupComponent,
   ],
   imports: [
     BrowserModule,

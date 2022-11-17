@@ -1,0 +1,106 @@
+<div>
+  <app-nav></app-nav>
+  <hr />
+  <!-- comment out <h1>{{ createForm.value.username }}</h1>-->
+  <div class="containerr">
+    <span [routerLink]="['/profile/home']" href="#" class="close">&times;</span>
+    <form (ngSubmit)="onSubmit()" #groupForm="ngForm">
+      <div class="group-name-wrap">
+        <label for="groupName">Group name</label>
+        <input
+          class="group-name form-group"
+          type="text"
+          name="groupName"
+          id="groupName"
+          ngModel
+          #groupName="ngModel"
+        />
+      </div>
+      <div>
+        <label for="groupSize">Choose a group size:</label>
+        <select
+          class="select form-group"
+          id="groupSize"
+          name="groupSize"
+          ngModel
+          #groupSize="ngModel"
+        >
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="3">4</option>
+          <option value="3">5</option>
+          <option value="3">6</option>
+          <option value="3">7</option>
+          <option value="3">8</option>
+          <option value="3">9</option>
+          <option value="3">10</option>
+        </select>
+      </div>
+      <div class="checkbox-container">
+        <label class="check"
+          >Strict <input class="checkbox" type="checkbox" /><span
+            class="checkmark"
+          ></span>
+        </label>
+        <label class="check"
+          >Non strict <input class="checkbox" type="checkbox" /><span
+            class="checkmark"
+          ></span>
+        </label>
+      </div>
+      <div class="checkbox-container">
+        <label class="check"
+          >Open <input class="checkbox" type="checkbox" /><span
+            class="checkmark"
+          ></span>
+        </label>
+        <label class="check"
+          >Closed <input class="checkbox" type="checkbox" /><span
+            class="checkmark"
+          ></span>
+        </label>
+      </div>
+
+      <div>
+        <div class="flex">
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            placeholder="Describe Your group ..."
+          ></textarea>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="!groupForm.form.valid">Create</button>
+    </form>
+  </div>
+
+  <!-- 
+TEST TEST  -->
+  <!-- <div class="container">
+  <app-nav></app-nav>
+  <hr />
+  <div class="grey-container">
+    <div class="main-container">
+      <form #f="ngForm">
+        <span [routerLink]="['/']" href="#" class="close">&times;</span>
+        <label for="group-name">Group name</label>
+        <input
+          class="main-input"
+          type="text"
+          name="group-name"
+          id="group-name"
+          required
+        />
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" required />
+        <button class="btn-login" type="submit" value="Login">Create</button>
+      </form>
+    </div>
+  </div>
+</div> -->
+</div>
