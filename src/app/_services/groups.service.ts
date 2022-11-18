@@ -1,20 +1,20 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs';
 // import { Groups } from '../_common/groups';
-import { Group } from '../_models/group.model';
-import { map } from 'rxjs/operators';
+import {Group} from '../_models/group.model';
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root',
 })
 export class GroupsService {
-  private baseUrl = 'http://localhost:8080/api/groups';
+  private baseUrl = `${environment.BASE_URL}/api/groups`;
   private groupsUrl!: string;
   posts!: Observable<Group>;
 
   constructor(private httpClient: HttpClient) {
-    this.groupsUrl = 'http://localhost:8080/groups';
+    this.groupsUrl = `${this.baseUrl}/all-groups`;
   }
 
   public findAll(): Observable<Group[]> {
