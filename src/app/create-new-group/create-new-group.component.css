@@ -22,6 +22,11 @@
 textarea {
   height: 200px;
 }
+
+/* .description,
+.group-name {
+} */
+
 .checkbox-container {
   font: inherit;
   font-size: 13px;
