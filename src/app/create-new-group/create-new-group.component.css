@@ -9,6 +9,10 @@
   padding: 20px 40px 120px 40px;
 }
 
+.example-form-field {
+  width: 200px;
+}
+
 .grey-container {
   background-color: #f6f6f6;
   padding: 1rem 1rem 1rem 1rem;

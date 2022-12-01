@@ -4,7 +4,59 @@
   <!-- comment out <h1>{{ createForm.value.username }}</h1>-->
   <div class="containerr">
     <span [routerLink]="['/profile/home']" href="#" class="close">&times;</span>
-    <form (ngSubmit)="onSubmit()" #groupForm="ngForm">
+
+    <!-- 
+      group name
+      descrioption
+      size
+      strict
+      open
+     -->
+
+    <form [formGroup]="form">
+      <input
+        type="text"
+        placeholder="Group name"
+        formControlName="groupName"
+        #groupName
+      />
+      <p>{{ groupName.value.length }} / 30</p>
+      <p *ngIf="getGroupName.errors?.nameExists">
+        This group name is already being used.
+      </p>
+      <input
+        type="text"
+        placeholder="Description ..."
+        formControlName="descrioption"
+        #description
+      />
+      <p>{{ description.value.length }} / 300</p>
+    </form>
+
+    <!-- <form class="create-group" [formGroup]="form"> -->
+    <!-- <mat-form-field>
+        <input type="text" name="group-name" placeholder="group name" />
+
+        <input type="email" name="email" placeholder="email" />
+      </mat-form-field> -->
+
+    <!--   
+      <button [disabled]="!form.valid">Create</button> -->
+    <!-- <mat-form-field class="example-form-field">
+        <mat-label>Clearable input</mat-label>
+        <input matInput type="text" [(ngModel)]="value" />
+        <button
+          *ngIf="value"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="value = ''"
+        >
+          close
+        </button>
+      </mat-form-field> -->
+    <!-- </form> -->
+    <!-- <form (ngSubmit)="onSubmit()" #groupForm="ngForm">
       <div class="group-name-wrap">
         <label for="groupName">Group name</label>
         <input
@@ -77,7 +129,7 @@
       </div>
 
       <button type="submit" [disabled]="!groupForm.form.valid">Create</button>
-    </form>
+    </form> -->
   </div>
 
   <!-- 

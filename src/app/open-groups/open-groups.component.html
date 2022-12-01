@@ -1,6 +1,6 @@
 <app-nav></app-nav>
 <!-- <p>Description: {{ tempGroups.description }}</p>-->
-<div class="top-sort" *ngFor="let temGroups of groups">
+<div>
   <!-- <form id="form">
     <input
       #myInput
@@ -14,8 +14,6 @@
   <!-- <button (click)="onStrictClick()">
     {{ strictButton ? "strict" : "non strict" }}
   </button> -->
-  <p>{{ temGroups.size }}</p>
-  <button class="second-button">size : {{ temGroups.groupName }}</button>
 </div>
 <div class="flex-cards">
   <div *ngFor="let tempGroups of groups" class="ngfor">

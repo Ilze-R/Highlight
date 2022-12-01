@@ -1,9 +1,10 @@
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 // import { Groups } from '../_common/groups';
-import {Group} from '../_models/group.model';
-import {environment} from "../../environments/environment";
+import { Group } from '../_models/group.model';
+import { environment } from '../../environments/environment';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -21,9 +22,26 @@ export class GroupsService {
     return this.httpClient.get<Group[]>(this.groupsUrl);
   }
 
-  public save(group: Group){
+  public save(group: Group) {
     return this.httpClient.post<Group>(this.groupsUrl, group);
   }
+
+  // findGroupById(id: number): Observable<Group> {
+  //   return this.httpClient.get<Group>(`/api/groups/${id}`);
+  // }
+
+  // findGroupOpen(){
+  //   return this.httpClient.get(`api/open`)
+  //   .pipe(
+  //     map(res => res["open"])
+  //   );
+  // }
+
+  // findAllGroups(): Observable<Group[]> {
+  //   return this.httpClient.get(this.groupsUrl)
+  //   .pipe(map((response) =>
+  //   this.posts = response);
+  // }
 
   //   getGroupsPaginate(
   //     thePage: number,
