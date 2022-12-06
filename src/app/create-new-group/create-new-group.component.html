@@ -24,21 +24,82 @@
       <p *ngIf="getGroupName.errors?.nameExists">
         This group name is already being used.
       </p>
-      <input
+      <textarea
         type="text"
         placeholder="Description ..."
         formControlName="descrioption"
         #description
-      />
+      ></textarea>
+
       <p>{{ description.value.length }} / 300</p>
+
+      <div>
+        <label class="label-size" for="groupSize">Choose a group size:</label>
+        <select
+          class="selectt form-group"
+          formControlName="groupSize"
+          #groupSize
+        >
+          <option value="1" [value]="1">1</option>
+          <option value="2" [value]="2">2</option>
+          <option value="3" [value]="3">3</option>
+          <option value="4" [value]="4">4</option>
+          <option value="5" [value]="5">5</option>
+          <option value="6" [value]="6">6</option>
+          <option value="7" [value]="7">7</option>
+          <option value="8" [value]="8">8</option>
+          <option value="9" [value]="9">9</option>
+          <option value="10" [value]="10">10</option>
+        </select>
+      </div>
+
+      <br />
+
+      <div class="checkbox-container">
+        <input
+          type="radio"
+          name="openOrClosed"
+          id="open"
+          value="open"
+          formControlName="openOrClosed"
+        />
+        <label for="open">open</label>
+        <input
+          type="radio"
+          name="openOrClosed"
+          id="closed"
+          value="closed"
+          formControlName="openOrClosed"
+        />
+        <label for="closed">closed</label>
+      </div>
+      <div class="checkbox-container">
+        <input
+          type="radio"
+          name="strictOrNon"
+          id="strict"
+          value="strict"
+          formControlName="strictOrNon"
+        />
+        <label for="strict">strict</label>
+        <input
+          type="radio"
+          name="strictOrNon"
+          id="nonStrict"
+          value="nonStrict"
+          formControlName="strictOrNon"
+        />
+        <label for="nonStrict">non strict</label>
+      </div>
+      <button type="submit">Create</button>
     </form>
 
     <!-- <form class="create-group" [formGroup]="form"> -->
-    <!-- <mat-form-field>
-        <input type="text" name="group-name" placeholder="group name" />
+    <mat-form-field>
+      <input type="text" name="group-name" placeholder="group name" />
 
-        <input type="email" name="email" placeholder="email" />
-      </mat-form-field> -->
+      <input type="email" name="email" placeholder="email" />
+    </mat-form-field>
 
     <!--   
       <button [disabled]="!form.valid">Create</button> -->

@@ -53,6 +53,10 @@ export class CreateNewGroupComponent implements OnInit {
         ],
       },
     ],
+    descrioption: ['', [Validators.required, Validators.minLength(3)]],
+    groupSize: ['', Validators.required],
+    openOrClosed: ['open', Validators.required],
+    strictOrNon: ['strict', Validators.required],
   });
 
   constructor(

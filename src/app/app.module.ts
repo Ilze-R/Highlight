@@ -38,8 +38,8 @@ import { ChatComponent } from './user-dashboard/chat/chat.component';
 import { CalendarModule } from '@syncfusion/ej2-angular-calendars';
 import { CreateNewGroupComponent } from './create-new-group/create-new-group.component';
 
-// import { MatFormFieldModule } from '@angular/material/form-field';
-// import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -76,8 +76,8 @@ import { CreateNewGroupComponent } from './create-new-group/create-new-group.com
     FontAwesomeModule,
     NgApexchartsModule,
     CalendarModule,
-    // MatFormFieldModule,
-    // MatInputModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [UsersService, GroupsService, authInterceptorProviders],
   bootstrap: [AppComponent],
